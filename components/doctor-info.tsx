@@ -91,9 +91,9 @@ export default function DoctorInfo() {
                 >
                   <Badge
                     variant="secondary"
-                    className="px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-sm font-medium border border-primary/10 bg-primary/5 text-primary hover:bg-primary/10 transition-colors cursor-default"
+                    className="px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-sm font-medium border border-primary/10 bg-primary/5 text-primary hover:bg-primary/10 transition-colors cursor-default whitespace-normal text-left"
                   >
-                    <CheckCircle  className="mr-2" />
+                    <CheckCircle className="mr-2 shrink-0" />
                     {item}
                   </Badge>
                 </motion.div>
