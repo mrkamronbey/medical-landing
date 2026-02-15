@@ -83,7 +83,7 @@ export default function Hero() {
               className="lg:hidden flex justify-center"
             >
               <div
-                className="w-70 h-70 sm:w-64 sm:h-64 overflow-hidden shadow-xl shadow-primary/10 border-4 border-primary/10"
+                className="w-75 h-75 sm:w-64 sm:h-64 overflow-hidden shadow-xl shadow-primary/10 border-4 border-primary/10"
                 style={{ borderRadius: "40% 60% 65% 35% / 45% 50% 50% 55%" }}
               >
                 <Image
