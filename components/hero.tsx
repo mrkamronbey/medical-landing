@@ -9,11 +9,11 @@ export default function Hero() {
   return (
     <section
       id="bosh"
-      className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20"
+      className="relative min-h-[100dvh] flex items-center overflow-hidden pt-16 md:pt-20"
     >
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-12 md:py-20 w-full">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="space-y-5 sm:space-y-7 text-left order-2 lg:order-1">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 md:py-20 w-full">
+        <div className="grid lg:grid-cols-2 gap-5 sm:gap-8 lg:gap-12 items-center">
+          <div className="space-y-3 sm:space-y-7 text-left order-2 lg:order-1">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ export default function Hero() {
               className="lg:hidden flex justify-center"
             >
               <div
-                className="w-80 h-80 sm:w-64 sm:h-64 overflow-hidden shadow-xl shadow-primary/10 border-4 border-primary/10"
+                className="w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-xl shadow-primary/10 border-4 border-primary/10"
                 style={{ borderRadius: "40% 60% 65% 35% / 45% 50% 50% 55%" }}
               >
                 <Image
