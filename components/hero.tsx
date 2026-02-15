@@ -11,27 +11,25 @@ export default function Hero() {
       id="bosh"
       className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20"
     >
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-20 w-full">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-12 md:py-20 w-full">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="space-y-5 sm:space-y-7 text-center lg:text-left order-2 lg:order-1">
+          <div className="space-y-5 sm:space-y-7 text-left order-2 lg:order-1">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight"
+              className="text-[27px] sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight"
             >
-              <span className="text-gradient">To&apos;rayev</span>
-              <br />
-              Asror
-              <br />
-              Abbosovich
+              <span className="text-gradient">To&apos;rayev</span>{" "}
+              <span className="inline lg:hidden">Asror Abbosovich</span>
+              <span className="hidden lg:inline"><br />Asror<br />Abbosovich</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg sm:text-xl lg:text-2xl font-semibold text-primary max-w-lg mx-auto lg:mx-0 leading-relaxed"
+              className="text-lg sm:text-xl lg:text-2xl font-semibold text-primary max-w-lg lg:mx-0 leading-relaxed"
             >
               — Samarqanddagi Urolog Shifokoringiz
             </motion.p>
@@ -40,7 +38,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25 }}
-              className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0 leading-relaxed"
+              className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-lg lg:mx-0 leading-relaxed"
             >
               Zamonaviy diagnostika va davolash usullari bilan
               sog&apos;lig&apos;ingizni ishonchli qo&apos;llarga topshiring.
@@ -50,7 +48,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start"
             >
               <Button
                 size="lg"
@@ -84,25 +82,18 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="lg:hidden flex justify-center"
             >
-              <div className="relative">
-                <div
-                  className="w-40 h-40 sm:w-52 sm:h-52 overflow-hidden shadow-xl shadow-primary/10 border-4 border-primary/10"
-                  style={{ borderRadius: "40% 60% 65% 35% / 45% 50% 50% 55%" }}
-                >
-                  <Image
-                    src="/doctor.jpg"
-                    alt="Dr. Asror To'rayev"
-                    width={208}
-                    height={208}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-2 -right-2 glass rounded-xl p-2.5 shadow-lg border border-white/50">
-                  <div className="flex items-center gap-1.5">
-                    <Shield className="w-4 h-4 text-accent" />
-                    <span className="text-xs font-semibold">5+ yil</span>
-                  </div>
-                </div>
+              <div
+                className="w-90 h-90 sm:w-64 sm:h-64 overflow-hidden shadow-xl shadow-primary/10 border-4 border-primary/10"
+                style={{ borderRadius: "40% 60% 65% 35% / 45% 50% 50% 55%" }}
+              >
+                <Image
+                  src="/doctor.jpg"
+                  alt="Dr. Asror To'rayev"
+                  width={256}
+                  height={256}
+                  loading="eager"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </motion.div>
 

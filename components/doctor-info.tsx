@@ -28,7 +28,7 @@ export default function DoctorInfo() {
   return (
     <section className="relative py-16 md:py-24">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ export default function DoctorInfo() {
               Asosiy <span className="text-gradient">yo&apos;nalishlarim</span>
             </h3>
 
-            <div className="flex flex-wrap gap-5 flex-1 content-start">
+            <div className="flex flex-wrap gap-3 sm:gap-5 flex-1 content-start">
               {specializations.map((item, i) => (
                 <motion.div
                   key={item}
@@ -91,7 +91,7 @@ export default function DoctorInfo() {
                 >
                   <Badge
                     variant="secondary"
-                    className="px-4 py-2 text-[14px] sm:text-sm font-medium border border-primary/10 bg-primary/5 text-primary hover:bg-primary/10 transition-colors cursor-default"
+                    className="px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-sm font-medium border border-primary/10 bg-primary/5 text-primary hover:bg-primary/10 transition-colors cursor-default"
                   >
                     <CheckCircle  className="mr-2" />
                     {item}
