@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       id="bosh"
-      className="relative min-h-[100dvh] flex items-center overflow-hidden pt-16 md:pt-20"
+      className="relative min-h-dvh flex items-center overflow-hidden pt-16 md:pt-20"
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 md:py-20 w-full">
         <div className="grid lg:grid-cols-2 gap-5 sm:gap-8 lg:gap-12 items-center">
