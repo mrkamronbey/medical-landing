@@ -95,8 +95,8 @@
   }
   .glass-strong {
     background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
   }
   .text-gradient {
     background: linear-gradient(135deg, oklch(0.65 0.15 185), oklch(0.40 0.18 300));
