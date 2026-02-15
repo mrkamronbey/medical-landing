@@ -18,7 +18,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-[27px] sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight"
+              className="text-[26px] sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight"
             >
               <span className="text-gradient">To&apos;rayev</span>{" "}
               <span className="inline lg:hidden">Asror Abbosovich</span>
@@ -29,7 +29,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg sm:text-xl lg:text-2xl font-semibold text-primary max-w-lg lg:mx-0 leading-relaxed"
+              className="text-md sm:text-xl lg:text-2xl font-semibold text-primary max-w-lg lg:mx-0 leading-relaxed"
             >
               — Samarqanddagi Urolog Shifokoringiz
             </motion.p>
@@ -38,7 +38,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25 }}
-              className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-lg lg:mx-0 leading-relaxed"
+              className="text-[14px] sm:text-lg lg:text-xl text-muted-foreground max-w-lg lg:mx-0 leading-relaxed"
             >
               Zamonaviy diagnostika va davolash usullari bilan
               sog&apos;lig&apos;ingizni ishonchli qo&apos;llarga topshiring.
@@ -83,7 +83,7 @@ export default function Hero() {
               className="lg:hidden flex justify-center"
             >
               <div
-                className="w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-xl shadow-primary/10 border-4 border-primary/10"
+                className="w-70 h-70 sm:w-64 sm:h-64 overflow-hidden shadow-xl shadow-primary/10 border-4 border-primary/10"
                 style={{ borderRadius: "40% 60% 65% 35% / 45% 50% 50% 55%" }}
               >
                 <Image
