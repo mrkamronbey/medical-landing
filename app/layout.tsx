@@ -9,9 +9,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Asror To'rayev — Urolog-Androlog Samarqand | Oliy toifali shifokor",
+  title: "Dr. Asror To'rayev — Urolog-Androlog  | Oliy toifali shifokor",
   description:
-    "Dr. Asror To'rayev — Samarqanddagi oliy toifali urolog-androlog. HoLEP, laparoskopiya, PCNL, varikotsele, bepushtlik davolash. Sintez Lab, Ixlos Med, ECU Medical. Navbatsiz qabul.",
+    "Samarqanddagi oliy toifali urolog-androlog. HoLEP, laparoskopiya, PCNL, varikotsele, bepushtlik davolash. Sintez Lab, Ixlos Med, ECU Medical. Navbatsiz qabul.",
   keywords: [
     "urolog Samarqand",
     "androlog Samarqand",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     "Ixlos Med",
     "ECU Medical",
   ],
-  authors: [{ name: "Dr. Asror To'rayev" }],
+  // authors: [{ name: "Dr. Asror To'rayev" }],
   openGraph: {
-    title: "Dr. Asror To'rayev — Urolog-Androlog Samarqand",
+    title: "Dr. Asror To'rayev — Urolog-Androlog",
     description:
       "Samarqanddagi oliy toifali urolog-androlog. Zamonaviy usullar bilan urologik kasalliklarni davolash. Navbatsiz qabul.",
     type: "website",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dr. Asror To'rayev — Urolog-Androlog Samarqand",
+    title: "Dr. Asror To'rayev — Urolog-Androlog",
     description:
       "Samarqanddagi oliy toifali urolog-androlog. Zamonaviy usullar bilan urologik kasalliklarni davolash.",
   },
