@@ -123,6 +123,7 @@ export default function Hero() {
                     alt="Dr. Asror To'rayev"
                     width={500}
                     height={600}
+                    loading="eager"
                     className="w-full h-auto object-cover"
                   />
                 </div>
