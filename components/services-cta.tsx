@@ -20,7 +20,7 @@ export default function ServicesCta() {
           </div>
           <div className="space-y-1">
             <p className="text-lg sm:text-xl font-semibold">
-              Onlayn yoziling — sizni navbatsiz qabul qilaman
+              Onlayn konsultatsiya — Qabulga yozilish
             </p>
             <p className="text-muted-foreground text-sm sm:text-base">
               Qabul kunlari: Dushanbadan Shanbagacha, soat 09:00 – 19:00
@@ -35,7 +35,7 @@ export default function ServicesCta() {
             className="text-sm rounded-xl bg-linear-to-r from-primary to-primary/90 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
           >
             <a
-              href="https://t.me/dr_torayev"
+              href="https://t.me/urolog_asrorturayev"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -52,7 +52,7 @@ export default function ServicesCta() {
             asChild
             className="text-sm rounded-xl border-primary/20 hover:bg-primary/5 hover:text-primary transition-all"
           >
-            <a href="tel:+998901234567">
+            <a href="tel:+998900083878">
               <Phone className="w-4 h-4" />
               Qo&apos;ng&apos;iroq qilish
             </a>

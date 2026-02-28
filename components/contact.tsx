@@ -15,8 +15,8 @@ const contactItems = [
   {
     icon: Phone,
     label: "Telefon",
-    value: "+998 90 123 45 67",
-    href: "tel:+998901234567",
+    value: "+998 90 008 38 78",
+    href: "tel:+998900083878",
     color: "#2563eb",
   },
   {
@@ -114,7 +114,7 @@ export default function Contact() {
                 className="w-full sm:w-auto rounded-xl text-base bg-linear-to-r from-primary to-primary/90 hover:from-primary/95 hover:to-primary shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
               >
                 <a
-                  href="https://t.me/dr_torayev"
+                  href="https://t.me/urolog_asrorturayev"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -131,7 +131,7 @@ export default function Contact() {
 
               <div className="flex items-center gap-3">
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/urolog_asrorturayev/?hl=ru"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-linear-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] flex items-center justify-center text-white hover:opacity-90 hover:scale-105 transition-all shadow-md"
@@ -146,7 +146,7 @@ export default function Contact() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.youtube.com/"
+                  href="https://youtube.com/@samarqand_urolog?si=OP1tAnm9Z1hZ-hDk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-[#FF0000] flex items-center justify-center text-white hover:opacity-90 hover:scale-105 transition-all shadow-md"

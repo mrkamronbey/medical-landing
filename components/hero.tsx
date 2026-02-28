@@ -34,15 +34,48 @@ export default function Hero() {
               — Samarqanddagi Urolog Shifokoringiz
             </motion.p>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25 }}
-              className="text-[14px] sm:text-lg lg:text-xl text-muted-foreground max-w-lg lg:mx-0 leading-relaxed"
+              className="max-w-lg lg:mx-0"
             >
-              Zamonaviy diagnostika va davolash usullari bilan
-              sog&apos;lig&apos;ingizni ishonchli qo&apos;llarga topshiring.
-            </motion.p>
+              <ul className="space-y-1.5 sm:space-y-2">
+                {[
+                  "Bepushtlikning barcha turlari",
+                  "Varikosele",
+                  "Denervatsiya",
+                  "Gidrosele",
+                  "TESE / MicroTESE",
+                  "Moyak ortig'i kistalari",
+                ].map((item, i) => (
+                  <motion.li
+                    key={item}
+                    initial={{ opacity: 0, x: -16 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.3 + i * 0.07 }}
+                    className="flex items-center gap-2.5 text-[13px] sm:text-base text-foreground/80"
+                  >
+                    <span className="shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
+                      <svg className="w-3 h-3 text-primary" fill="none" viewBox="0 0 12 12" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M2 6l3 3 5-5" />
+                      </svg>
+                    </span>
+                    <span className="font-medium">{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
+              <motion.p
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.75 }}
+                className="mt-3 sm:mt-4 text-[12px] sm:text-sm text-primary/80 font-semibold border-l-2 border-primary/40 pl-3"
+              >
+                Va barcha turdagi urologik-andrologik kasalliklarga
+                <br className="hidden sm:block" />
+                <span className="text-primary"> konservativ va operativ yechim beraman.</span>
+              </motion.p>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -56,7 +89,7 @@ export default function Hero() {
                 className="text-base rounded-xl bg-linear-to-r from-primary to-primary/90 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:from-primary/95 hover:to-primary transition-all"
               >
                 <a
-                  href="https://t.me/dr_torayev"
+                  href="https://t.me/urolog_asrorturayev"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -87,7 +120,7 @@ export default function Hero() {
                 style={{ borderRadius: "40% 60% 65% 35% / 45% 50% 50% 55%" }}
               >
                 <Image
-                  src="/doctor.jpg"
+                  src="/asror.webp"
                   alt="Dr. Asror To'rayev"
                   width={256}
                   height={256}
@@ -119,12 +152,12 @@ export default function Hero() {
                   style={{ borderRadius: "40% 60% 65% 35% / 45% 50% 50% 55%" }}
                 >
                   <Image
-                    src="/doctor.jpg"
+                    src="/asror.webp"
                     alt="Dr. Asror To'rayev"
                     width={500}
                     height={600}
                     loading="eager"
-                    className="w-full h-auto object-cover"
+                    className="w-full h-[500px] object-cover"
                   />
                 </div>
 

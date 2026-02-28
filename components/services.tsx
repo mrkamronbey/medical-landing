@@ -99,7 +99,6 @@ export default function Services() {
           </div>
         </div>
 
-        {/* CTA Banner */}
         <ServicesCta />
       </div>
     </section>

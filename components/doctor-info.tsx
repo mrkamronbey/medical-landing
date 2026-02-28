@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import {
-  Building2,
   Stethoscope,
   CheckCircle,
 } from "lucide-react";
+import ServicesCta from "./services-cta";
 
 const specializations = [
   "Bepushtlikni barcha turlari",
@@ -18,11 +18,6 @@ const specializations = [
   "Jinsiy zaiflik va tez bo'shanishni barcha turlarini davolash",
 ];
 
-const clinics = [
-  { name: "Sintez Lab", color: "bg-blue-500/10 text-blue-600" },
-  { name: "Ixlos Med", color: "bg-violet-500/10 text-violet-600" },
-  { name: "ECU Medical", color: "bg-teal-500/10 text-teal-600" },
-];
 
 export default function DoctorInfo() {
   return (
@@ -50,23 +45,6 @@ export default function DoctorInfo() {
               foydalangan holda yordam beraman.
             </p>
 
-            {/* Klinikalar */}
-            <div className="space-y-3 pt-2">
-              <div className="flex items-center gap-2 text-sm font-medium text-foreground">
-                <Building2 className="w-4 h-4 text-primary" />
-                Ish joylarim
-              </div>
-              <div className="flex flex-wrap gap-3">
-                {clinics.map((clinic) => (
-                  <div
-                    key={clinic.name}
-                    className={`${clinic.color} px-4 py-2.5 rounded-xl text-sm font-semibold`}
-                  >
-                    {clinic.name}
-                  </div>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
           <motion.div
@@ -101,6 +79,7 @@ export default function DoctorInfo() {
             </div>
           </motion.div>
         </div>
+        <ServicesCta />
       </div>
     </section>
   );
