@@ -91,8 +91,11 @@ export default function YoutubeVideo({ id }: { id: string }) {
       <img
         src={`https://img.youtube.com/vi/${id}/hqdefault.jpg`}
         alt="Video thumbnail"
+        width={480}
+        height={360}
         className="w-full h-full object-cover"
         loading="lazy"
+        decoding="async"
       />
       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
       <div className="absolute inset-0 flex items-center justify-center">
