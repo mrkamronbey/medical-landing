@@ -8,6 +8,7 @@ import Image from "next/image";
 const navLinks = [
   { href: "#bosh", label: "Bosh sahifa" },
   { href: "#xizmatlar", label: "Xizmatlar" },
+  { href: "#natijalar", label: "Natijalar" },
   { href: "#manzillar", label: "Ish joylarim" },
 ];
 
