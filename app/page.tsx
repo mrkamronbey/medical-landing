@@ -1,13 +1,15 @@
+import dynamic from "next/dynamic";
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
-import Services from "@/components/services";
-import DoctorInfo from "@/components/doctor-info";
-import SurgicalMethods from "@/components/surgical-methods";
-import WhyMe from "@/components/why-me";
-import Natijalar from "@/components/natijalar";
-import Clinics from "@/components/clinics";
-import Contact from "@/components/contact";
-import Footer from "@/components/footer";
+
+const DoctorInfo = dynamic(() => import("@/components/doctor-info"));
+const Clinics = dynamic(() => import("@/components/clinics"));
+const Services = dynamic(() => import("@/components/services"));
+const SurgicalMethods = dynamic(() => import("@/components/surgical-methods"));
+const WhyMe = dynamic(() => import("@/components/why-me"));
+const Natijalar = dynamic(() => import("@/components/natijalar"));
+const Contact = dynamic(() => import("@/components/contact"));
+const Footer = dynamic(() => import("@/components/footer"));
 
 const jsonLd = {
   "@context": "https://schema.org",

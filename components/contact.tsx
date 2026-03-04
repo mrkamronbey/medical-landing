@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin } from "lucide-react";
@@ -28,7 +29,10 @@ const contactItems = [
   },
 ];
 
+const MAP_SRC = "https://yandex.uz/map-widget/v1/?ll=66.960000%2C39.650000&z=13&l=map&pt=66.960000%2C39.650000%2Cpm2rdm";
+
 export default function Contact() {
+  const [mapLoaded, setMapLoaded] = useState(false);
   return (
     <section id="aloqa" className="relative py-20 md:py-28">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -170,16 +174,31 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="rounded-3xl overflow-hidden border border-border/40 shadow-xl shadow-black/3 h-full">
-              <iframe
-                src="https://yandex.uz/map-widget/v1/?ll=66.960000%2C39.650000&z=13&l=map&pt=66.960000%2C39.650000%2Cpm2rdm"
-                width="100%"
-                height="100%"
-                className="w-full h-full min-h-[400px] sm:min-h-[480px] block"
-                style={{ border: 0, margin: 0, padding: 0 }}
-                allowFullScreen
-                title="Samarqand shahri xaritasi"
-              />
+            <div className="rounded-3xl overflow-hidden border border-border/40 shadow-xl shadow-black/3 h-full min-h-[400px] sm:min-h-[480px] relative">
+              {mapLoaded ? (
+                <iframe
+                  src={MAP_SRC}
+                  width="100%"
+                  height="100%"
+                  className="absolute inset-0 w-full h-full block"
+                  style={{ border: 0, margin: 0, padding: 0 }}
+                  allowFullScreen
+                  title="Samarqand shahri xaritasi"
+                />
+              ) : (
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-primary/5">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+                    <MapPin className="w-8 h-8 text-primary" />
+                  </div>
+                  <p className="text-sm text-muted-foreground font-medium">Samarqand shahri</p>
+                  <button
+                    onClick={() => setMapLoaded(true)}
+                    className="px-5 py-2.5 rounded-xl bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-colors shadow-md shadow-primary/25"
+                  >
+                    Xaritani yuklash
+                  </button>
+                </div>
+              )}
             </div>
           </motion.div>
         </div>
