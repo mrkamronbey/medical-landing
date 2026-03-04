@@ -1,11 +1,15 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Play } from "lucide-react";
 
 declare global {
   interface Window {
     YT: {
-      Player: new (el: HTMLElement, opts: object) => {
+      Player: new (
+        el: HTMLElement,
+        opts: object
+      ) => {
         seekTo: (seconds: number, allowSeekAhead: boolean) => void;
         pauseVideo: () => void;
         destroy: () => void;
@@ -40,9 +44,11 @@ function loadYTApi(): Promise<void> {
 }
 
 export default function YoutubeVideo({ id }: { id: string }) {
+  const [playing, setPlaying] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!playing) return;
     let player: InstanceType<typeof window.YT.Player> | null = null;
 
     loadYTApi().then(() => {
@@ -54,7 +60,7 @@ export default function YoutubeVideo({ id }: { id: string }) {
         videoId: id,
         width: "100%",
         height: "100%",
-        playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
+        playerVars: { rel: 0, modestbranding: 1, playsinline: 1, autoplay: 1 },
         events: {
           onStateChange: (e: { data: number }) => {
             if (e.data === 0) {
@@ -69,7 +75,31 @@ export default function YoutubeVideo({ id }: { id: string }) {
     return () => {
       player?.destroy();
     };
-  }, [id]);
+  }, [playing, id]);
 
-  return <div ref={containerRef} className="absolute inset-0 w-full h-full" />;
+  if (playing) {
+    return <div ref={containerRef} className="absolute inset-0 w-full h-full" />;
+  }
+
+  return (
+    <button
+      onClick={() => setPlaying(true)}
+      className="absolute inset-0 w-full h-full group"
+      aria-label="Videoni ijro etish"
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`https://img.youtube.com/vi/${id}/hqdefault.jpg`}
+        alt="Video thumbnail"
+        className="w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <Play className="w-6 h-6 text-white fill-white ml-1" />
+        </div>
+      </div>
+    </button>
+  );
 }

@@ -124,7 +124,7 @@ export default function Hero() {
                   alt="Dr. Asror To'rayev"
                   width={256}
                   height={256}
-                  loading="eager"
+                  priority
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -156,6 +156,7 @@ export default function Hero() {
                     alt="Dr. Asror To'rayev"
                     width={500}
                     height={600}
+                    priority
                     loading="eager"
                     className="w-full h-[500px] object-cover"
                   />
