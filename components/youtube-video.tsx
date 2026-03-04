@@ -43,7 +43,7 @@ export default function YoutubeVideo({ id }: { id: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let player: ReturnType<typeof window.YT.Player> | null = null;
+    let player: InstanceType<typeof window.YT.Player> | null = null;
 
     loadYTApi().then(() => {
       if (!containerRef.current) return;
