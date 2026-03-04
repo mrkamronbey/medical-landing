@@ -31,6 +31,19 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Dr. Asror To&apos;rayev. Barcha
             huquqlar himoyalangan.
           </p>
+
+          {/* Developer */}
+          <p className="text-muted-foreground text-xs sm:text-sm">
+            Developed & Designed by{" "}
+            <a
+              href="https://t.me/dev_adamm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-primary transition-colors"
+            >
+              Kamronbek
+            </a>
+          </p>
         </div>
       </div>
     </footer>
