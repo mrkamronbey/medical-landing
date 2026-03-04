@@ -1,9 +1,10 @@
 "use client";
 
-import { useRef, useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { useInfiniteCarousel } from "@/lib/use-infinite-carousel";
+import YoutubeVideo from "@/components/youtube-video";
 
 const videos = [
   { id: "vLhTBFh0UT8" },
@@ -16,49 +17,16 @@ const videos = [
   { id: "VovM0tyB9DA" },
 ];
 
-const CARD_WIDTH = 220;
-const GAP = 20;
-const STEP = CARD_WIDTH + GAP;
-
 const FADE_MASK =
   "linear-gradient(to right, transparent, black 60px, black calc(100% - 60px), transparent)";
 
 export default function Natijalar() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const { scrollRef, activeIndex, scrollToIndex } = useInfiniteCarousel({
+    totalItems: videos.length,
+    autoplayInterval: 0,
+  });
 
-  const scrollTo = useCallback((i: number) => {
-    const el = scrollRef.current;
-    if (!el) return;
-    el.scrollTo({ left: i * STEP, behavior: "smooth" });
-  }, []);
-
-  const prev = useCallback(() => {
-    scrollTo(Math.max(activeIndex - 1, 0));
-  }, [activeIndex, scrollTo]);
-
-  const next = useCallback(() => {
-    scrollTo(Math.min(activeIndex + 1, videos.length - 1));
-  }, [activeIndex, scrollTo]);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const i = cardRefs.current.indexOf(entry.target as HTMLDivElement);
-            if (i !== -1) setActiveIndex(i);
-          }
-        });
-      },
-      { root: el, threshold: 0.6 }
-    );
-    cardRefs.current.forEach((card) => card && observer.observe(card));
-    return () => observer.disconnect();
-  }, []);
+  const tripleVideos = [...videos, ...videos, ...videos];
 
   return (
     <section id="natijalar" className="relative py-20 md:py-28">
@@ -87,15 +55,13 @@ export default function Natijalar() {
         <div className="relative">
           {/* Prev button */}
           <button
-            onClick={prev}
-            disabled={activeIndex === 0}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 rounded-full bg-white border border-primary/10 shadow-md flex items-center justify-center text-primary hover:bg-primary/5 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+            onClick={() => scrollToIndex((activeIndex - 1 + videos.length) % videos.length)}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 rounded-full bg-white border border-primary/10 shadow-md flex items-center justify-center text-primary hover:bg-primary/5 transition-all"
             aria-label="Oldingi"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
 
-          {/* Scroll container */}
           <div
             ref={scrollRef}
             className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 scrollbar-hide"
@@ -104,47 +70,47 @@ export default function Natijalar() {
               msOverflowStyle: "none",
               maskImage: FADE_MASK,
               WebkitMaskImage: FADE_MASK,
-              scrollPaddingLeft: "16px",
             }}
           >
-            {videos.map((video, i) => (
+            {tripleVideos.map((video, i) => (
               <div
-                key={video.id}
-                ref={(el) => { cardRefs.current[i] = el; }}
-                className="snap-start shrink-0"
-                style={{ width: CARD_WIDTH }}
+                key={`${video.id}-${i}`}
+                className="snap-start shrink-0 w-[45%] sm:w-[220px] lg:w-[240px]"
               >
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className="relative w-full rounded-2xl overflow-hidden border border-primary/10 bg-white/80 backdrop-blur-sm shadow-sm"
+                <div className="relative w-full rounded-2xl overflow-hidden border border-primary/10 bg-white/80 backdrop-blur-sm"
                   style={{ aspectRatio: "9/16" }}
                 >
-                  <iframe
-                    src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1`}
-                    title={`Natija ${i + 1}`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
-                </motion.div>
+                  <YoutubeVideo id={video.id} />
+                </div>
               </div>
             ))}
           </div>
 
           {/* Next button */}
           <button
-            onClick={next}
-            disabled={activeIndex === videos.length - 1}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 rounded-full bg-white border border-primary/10 shadow-md flex items-center justify-center text-primary hover:bg-primary/5 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+            onClick={() => scrollToIndex((activeIndex + 1) % videos.length)}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 rounded-full bg-white border border-primary/10 shadow-md flex items-center justify-center text-primary hover:bg-primary/5 transition-all"
             aria-label="Keyingi"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
-        </div>
 
+          {/* Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {videos.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => scrollToIndex(i)}
+                className={`h-2 rounded-full cursor-pointer transition-all duration-300 ${
+                  i === activeIndex
+                    ? "w-8 bg-primary"
+                    : "w-2 bg-primary/20 hover:bg-primary/40"
+                }`}
+                aria-label={`Video ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

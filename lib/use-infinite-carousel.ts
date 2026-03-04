@@ -74,6 +74,7 @@ export function useInfiniteCarousel({
 
   const startAutoplay = useCallback(() => {
     stopAutoplay();
+    if (!autoplayInterval) return;
     autoplayRef.current = setInterval(() => {
       const el = scrollRef.current;
       if (!el || isJumping.current) return;
