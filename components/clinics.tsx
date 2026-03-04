@@ -77,6 +77,7 @@ export default function Clinics() {
                   alt={clinic.name}
                   width={600}
                   height={400}
+                  loading="lazy"
                   className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                   onError={(e) => {
                     (e.currentTarget as HTMLImageElement).style.display = "none";

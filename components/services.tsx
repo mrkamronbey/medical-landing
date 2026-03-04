@@ -46,6 +46,9 @@ export default function Services() {
         <div className="relative">
           <div
             ref={scrollRef}
+            role="region"
+            aria-label="Xizmatlar karuseli"
+            tabIndex={0}
             className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 scrollbar-hide"
             style={{
               scrollbarWidth: "none",

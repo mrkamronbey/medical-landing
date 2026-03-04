@@ -5,7 +5,8 @@ import "./globals.css";
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 const BASE_URL = "https://urologasrorturayev.uz";
@@ -105,6 +106,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uz" className="scroll-smooth">
+      <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://img.youtube.com" />
+        <link rel="dns-prefetch" href="https://www.youtube.com" />
+        <link rel="dns-prefetch" href="https://yandex.uz" />
+      </head>
       <body className={`${poppins.variable} font-sans antialiased`}>
         {children}
       </body>

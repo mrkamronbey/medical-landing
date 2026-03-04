@@ -64,6 +64,9 @@ export default function Natijalar() {
 
           <div
             ref={scrollRef}
+            role="region"
+            aria-label="Natijalar karuseli"
+            tabIndex={0}
             className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 scrollbar-hide"
             style={{
               scrollbarWidth: "none",
