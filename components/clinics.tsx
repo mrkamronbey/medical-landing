@@ -9,7 +9,7 @@ const clinics = [
     id: 1,
     name: "Eku Medical Markaz",
     address: "Samarqand shahar, Beruniy ko'chasi 103-uy",
-    landmark: "Povorot, IXLOS MED Klinikasi",
+    landmark: "Povorot, Choy fabrika",
     image: "/clinic1.webp",
     accent: "from-primary/20 to-accent/10",
     badge: "01",
