@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -13,7 +14,8 @@ const BASE_URL = "https://urologasrorturayev.uz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: "Dr. Asror To'rayev — Urolog-Androlog Samarqand | Oliy toifali shifokor",
+  title:
+    "Dr. Asror To'rayev — Urolog-Androlog Samarqand | Oliy toifali shifokor",
   description:
     "Samarqanddagi oliy toifali urolog-androlog Dr. Asror To'rayev. HoLEP, laparoskopiya, PCNL, varikotsele, bepushtlik, prostata davolash. Sintez Lab, Ixlos Med, ECU Medical. +998 90 008 38 78",
   keywords: [
@@ -95,7 +97,7 @@ export const metadata: Metadata = {
     "geo.region": "UZ-SA",
     "geo.placename": "Samarqand",
     "geo.position": "39.6542;66.9597",
-    "ICBM": "39.6542, 66.9597",
+    ICBM: "39.6542, 66.9597",
   },
 };
 
@@ -107,12 +109,46 @@ export default function RootLayout({
   return (
     <html lang="uz" className="scroll-smooth">
       <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link rel="dns-prefetch" href="https://img.youtube.com" />
         <link rel="dns-prefetch" href="https://www.youtube.com" />
         <link rel="dns-prefetch" href="https://yandex.uz" />
       </head>
       <body className={`${poppins.variable} font-sans antialiased`}>
+        {/* Meta Pixel Code */}
+        <Script
+          id="meta-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '900364736112239');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=900364736112239&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
+        {/* End Meta Pixel Code */}
         {children}
       </body>
     </html>
