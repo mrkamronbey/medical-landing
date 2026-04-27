@@ -31,7 +31,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-md sm:text-xl lg:text-2xl font-semibold text-primary max-w-lg lg:mx-0 leading-relaxed"
             >
-              — Samarqanddagi Urolog Shifokoringiz
+              — Samarqand va Buxorodagi Urolog Shifokoringiz
             </motion.p>
 
             <motion.div

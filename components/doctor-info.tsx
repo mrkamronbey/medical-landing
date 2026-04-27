@@ -40,7 +40,7 @@ export default function DoctorInfo() {
             </Badge>
 
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-              Men urolog-androlog shifokorman. Samarqand shahrida faoliyat
+              Men urolog-androlog shifokorman. Samarqand va Buxoro shahrlarida faoliyat
               yuritaman va bemorlarimga zamonaviy tibbiyot yutuqlaridan
               foydalangan holda yordam beraman.
             </p>

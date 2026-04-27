@@ -20,7 +20,7 @@ const jsonLd = {
       name: "Dr. Asror To'rayev",
       alternateName: ["Асрор Тураев", "Asror Turayev"],
       description:
-        "Samarqandda faoliyat yurituvchi oliy toifali urolog-androlog. HoLEP, laparoskopiya, PCNL, varikotsele, bepushtlik davolash bo'yicha mutaxassis.",
+        "Samarqand & Buxoroda faoliyat yurituvchi oliy toifali urolog-androlog. HoLEP, laparoskopiya, PCNL, varikotsele, bepushtlik davolash bo'yicha mutaxassis.",
       telephone: "+998900083878",
       url: "https://urologasrorturayev.uz",
       sameAs: [
@@ -32,7 +32,7 @@ const jsonLd = {
       medicalSpecialty: ["Urology", "Andrology"],
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Samarqand",
+        addressLocality: "Samarqand & Buxoro",
         addressCountry: "UZ",
       },
       hasOfferCatalog: {
@@ -51,7 +51,7 @@ const jsonLd = {
     {
       "@type": "MedicalBusiness",
       "@id": "https://urologasrorturayev.uz/#business",
-      name: "Urolog-Androlog Samarqand — Dr. Asror To'rayev",
+      name: "Urolog-Androlog Samarqand & Buxoro — Dr. Asror To'rayev",
       telephone: "+998900083878",
       url: "https://urologasrorturayev.uz",
       image: "https://urologasrorturayev.uz/opengraph-image",

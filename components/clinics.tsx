@@ -5,26 +5,26 @@ import { MapPin, Navigation, ExternalLink } from "lucide-react";
 import Image from "next/image";
 
 const clinics = [
-  {
-    id: 1,
-    name: "Eku Medical Markaz",
-    address: "Samarqand shahar, Beruniy ko'chasi 103-uy",
-    landmark: "Povorot, Choy fabrika",
-    image: "/clinic1.webp",
-    accent: "from-primary/20 to-accent/10",
-    badge: "01",
-    mapUrl: "https://yandex.uz/maps/?text=Samarqand+Beruniy+ko'chasi+103",
-  },
-  {
-    id: 2,
-    name: "IXLOS MED Klinikasi",
-    address: "Samarqand shahar, Qorasuv massivi, Iftixor ko'chasi 2A uy",
-    landmark: "81-maktab va Football akademiyasi, «Sintez Lab» Klinikasi",
-    image: "/clinic2.webp",
-    accent: "from-accent/20 to-primary/10",
-    badge: "02",
-    mapUrl: "https://yandex.uz/maps/?text=Samarqand+Qorasuv+massivi+Iftixor+ko'chasi+2A",
-  },
+  // {
+  //   id: 1,
+  //   name: "Eku Medical Markaz",
+  //   address: "Samarqand shahar, Beruniy ko'chasi 103-uy",
+  //   landmark: "Povorot, Choy fabrika",
+  //   image: "/clinic1.webp",
+  //   accent: "from-primary/20 to-accent/10",
+  //   badge: "01",
+  //   mapUrl: "https://yandex.uz/maps/?text=Samarqand+Beruniy+ko'chasi+103",
+  // },
+  // {
+  //   id: 2,
+  //   name: "IXLOS MED Klinikasi",
+  //   address: "Samarqand shahar, Qorasuv massivi, Iftixor ko'chasi 2A uy",
+  //   landmark: "81-maktab va Football akademiyasi, «Sintez Lab» Klinikasi",
+  //   image: "/clinic2.webp",
+  //   accent: "from-accent/20 to-primary/10",
+  //   badge: "02",
+  //   mapUrl: "https://yandex.uz/maps/?text=Samarqand+Qorasuv+massivi+Iftixor+ko'chasi+2A",
+  // },
   {
     id: 3,
     name: "Sintez Lab Klinikasi",
@@ -56,7 +56,7 @@ export default function Clinics() {
             <span className="text-gradient">Ish joylarim</span>
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto">
-            Samarqand shahridagi 3 ta klinikada qabul olib boraman
+            Samarqand va Buxoro shahridagi kliniklarda qabul olib boraman
           </p>
         </motion.div>
 
