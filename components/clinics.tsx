@@ -4,7 +4,18 @@ import { motion } from "framer-motion";
 import { MapPin, Navigation, ExternalLink } from "lucide-react";
 import Image from "next/image";
 
-const clinics = [
+type Clinic = {
+  id: number;
+  name: string;
+  address: string;
+  landmark?: string;
+  image: string;
+  accent: string;
+  badge: string;
+  mapUrl: string;
+};
+
+const clinics: Clinic[] = [
   // {
   //   id: 1,
   //   name: "Eku Medical Markaz",
@@ -35,6 +46,15 @@ const clinics = [
     badge: "03",
     mapUrl: "https://yandex.uz/maps/?text=Samarqand+Laxuti+ko'chasi+2A",
   },
+  {
+    id: 4,
+    name: "Med Fast Clinic",
+    address: "Samarqand shahar, Ozod Sharq ko'chasi, 8-uy",
+    image: "/clinic4.webp",
+    accent: "from-accent/15 to-primary/15",
+    badge: "04",
+    mapUrl: "https://yandex.uz/maps/-/CTAduM2O",
+  },
 ];
 
 export default function Clinics() {
@@ -56,7 +76,7 @@ export default function Clinics() {
             <span className="text-gradient">Ish joylarim</span>
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto">
-            Samarqand va Buxoro shahridagi kliniklarda qabul olib boraman
+            Samarqand shahridagi kliniklarda qabul olib boraman
           </p>
         </motion.div>
 
@@ -111,15 +131,17 @@ export default function Clinics() {
                     </p>
                   </div>
 
-                  <div className="flex items-start gap-2.5">
-                    <span className="shrink-0 w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center mt-0.5">
-                      <Navigation className="w-3 h-3 text-accent" />
-                    </span>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      <span className="font-medium text-foreground/70">Mo&apos;ljal: </span>
-                      {clinic.landmark}
-                    </p>
-                  </div>
+                  {clinic.landmark && (
+                    <div className="flex items-start gap-2.5">
+                      <span className="shrink-0 w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center mt-0.5">
+                        <Navigation className="w-3 h-3 text-accent" />
+                      </span>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        <span className="font-medium text-foreground/70">Mo&apos;ljal: </span>
+                        {clinic.landmark}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
 

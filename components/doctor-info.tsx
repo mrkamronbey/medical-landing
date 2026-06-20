@@ -9,6 +9,8 @@ import {
 import ServicesCta from "./services-cta";
 
 const specializations = [
+  "Jinsiy olatga protez o'rnatish",
+  "Prostata adenomasi va buyrak toshlarini lazerda olish",
   "Bepushtlikni barcha turlari",
   "Varikosele",
   "Gidrosele",
@@ -40,7 +42,7 @@ export default function DoctorInfo() {
             </Badge>
 
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-              Men urolog-androlog shifokorman. Samarqand va Buxoro shahrlarida faoliyat
+              Men urolog-androlog shifokorman. Samarqand shahrida faoliyat
               yuritaman va bemorlarimga zamonaviy tibbiyot yutuqlaridan
               foydalangan holda yordam beraman.
             </p>

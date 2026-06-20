@@ -2,6 +2,31 @@ export const services = [
   {
     icon: () => (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+        <path d="M12 2v20" />
+        <path d="M12 2c2.5 2 4 4.2 4 6.8a4 4 0 0 1-8 0C8 6.2 9.5 4 12 2z" />
+        <circle cx="12" cy="16" r="3" />
+      </svg>
+    ),
+    title: "Penil Protez (jinsiy olatga protez)",
+    description:
+      "Erektil disfunksiya — potensiya yo'qolishini davolashning eng samarali yakuniy usuli. Jinsiy olatga maxsus protez o'rnatiladi: tabiiy ko'rinish va to'liq jinsiy faoliyat tiklanadi. Operatsiya xavfsiz va yuqori, barqaror natija beradi.",
+  },
+  {
+    icon: () => (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+        <ellipse cx="8.5" cy="15" rx="3" ry="4" />
+        <ellipse cx="15.5" cy="15" rx="3" ry="4" />
+        <path d="M12 3v9" />
+        <path d="M12 12v8" strokeDasharray="2 2" />
+      </svg>
+    ),
+    title: "Moyakdagi operatsiyalar — endi chandiqsiz",
+    description:
+      "Operatsion kesma rafe liniyasidan — ikkita moyak o'rtasidan o'tgan tabiiy chiziqdan amalga oshiriladi, shu sababli chandiq ko'rinmaydi. Gidrosele, moyak ortig'i kistalari, TESE/MicroTESE, spermatosele va moyak hosilalari shu usulda davolanadi.",
+  },
+  {
+    icon: () => (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
         <circle cx="12" cy="16" r="5" />
         <path d="M12 11V3" />
         <path d="M8 5h8" />

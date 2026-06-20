@@ -31,7 +31,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-md sm:text-xl lg:text-2xl font-semibold text-primary max-w-lg lg:mx-0 leading-relaxed"
             >
-              — Samarqand va Buxorodagi Urolog Shifokoringiz
+              — Samarqandagi Urolog Shifokoringiz
             </motion.p>
 
             <motion.div
@@ -42,11 +42,14 @@ export default function Hero() {
             >
               <ul className="space-y-1.5 sm:space-y-2">
                 {[
+                  "Jinsiy olatga protez o'rnatish",
+                  "Varikoseleni mikroskopik Marmar operatsiyasi",
                   "Bepushtlikning barcha turlari",
-                  "Varikosele",
+                  "Prostata adenomasini lazer HoLEP/MoLEP operatsiyalari",
+                  "Buyrak toshlarini lazer yordamida olish",
                   "Denervatsiya",
+                  "Ligamentotomiya",
                   "Gidrosele",
-                  "TESE / MicroTESE",
                   "Moyak ortig'i kistalari",
                 ].map((item, i) => (
                   <motion.li
