@@ -123,12 +123,12 @@ export default function Hero() {
                 style={{ borderRadius: "40% 60% 65% 35% / 45% 50% 50% 55%" }}
               >
                 <Image
-                  src="/asror.webp"
+                  src="/asror-new.webp"
                   alt="Dr. Asror To'rayev"
                   width={256}
                   height={256}
                   priority
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </motion.div>
@@ -155,13 +155,13 @@ export default function Hero() {
                   style={{ borderRadius: "40% 60% 65% 35% / 45% 50% 50% 55%" }}
                 >
                   <Image
-                    src="/asror.webp"
+                    src="/asror-new.webp"
                     alt="Dr. Asror To'rayev"
                     width={500}
                     height={600}
                     priority
                     loading="eager"
-                    className="w-full h-[500px] object-cover"
+                    className="w-full h-[500px] object-cover object-top"
                   />
                 </div>
 
